@@ -1,0 +1,152 @@
+.row:nth-child(2) {
+	flex-direction: row-reverse;
+}
+
+section.tm-card:hover {
+	color: #76cdd8;
+}
+
+/* Second Task */
+
+section.tm-card {
+	position: relative;
+}
+
+section.tm-card:nth-child(odd):hover::after {
+	position: absolute;
+	content: "";
+	top: 0;
+	right: 0;
+	width: 0;
+	height: 0;
+	border-top: 100px solid #76cdd8;
+	border-left: 100px solid transparent;
+}
+
+section.tm-card:nth-child(even):hover::after {
+	position: absolute;
+	content: "";
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 0;
+	border-top: 100px solid #76cdd8;
+	border-right: 100px solid transparent;
+}
+
+section .tm-text-color-primary {
+	color: #76cdd8;
+}
+
+/* Background color behind the pics */
+
+.tm-bg-color-primary {
+	background-color: #76cdd8;
+}
+
+/* Third task and | Fifth Task (first half)*/
+
+.btn {
+	background-color: #019999;
+	border-color: #019999;
+}
+
+.btn:hover {
+	background-color: rgb(118, 205, 216);
+	border-color: rgb(118, 205, 216);
+}
+
+/* Fourth task */
+
+img[src*="image-01.jpg"] {
+	transition: transform .2s;
+}
+
+img[src*="image-01.jpg"]:hover {
+	transform: scale(1.05);
+}
+
+section:nth-child(4) div:nth-child(1) {
+	z-index: 1;
+}
+
+section:nth-child(3) div:nth-child(1) {
+	z-index: 2;
+}
+
+/* Fifth task */
+
+img[src*="image-02.jpg"] {
+	transition: transform .2s;
+}
+
+img[src*="image-02.jpg"]:hover {
+	transform: scale(1.05);
+}
+
+section:nth-child(4) div:nth-child(2) {
+	z-index: 1;
+}
+
+section:nth-child(5) div:nth-child(2), section:nth-child(5) div:nth-child(3) {
+	z-index: 2;
+}
+
+/* Sixth task */
+
+img[src*="image-03.jpg"] {
+	transition: transform .2s;
+}
+
+img[src*="image-03.jpg"]:hover {
+	transform: scale(1.05);
+}
+
+section:nth-child(5) div:nth-child(1) {
+	z-index: 1;
+}
+
+section:nth-child(4) div:nth-child(1) {
+	z-index: 2;
+}
+
+.tm-bg-color-secondary {
+	background-color: #019999;
+}
+
+.tm-pricing-table {
+	border-color: #019999;
+}
+
+.tm-pricing-table:hover {
+	box-shadow: 0 0 0 0.2rem #24d4d4;
+}
+
+.tm-pricing-table .btn:hover {
+	background: #24d4d4;
+}
+
+.tm-pricing-discount__star {
+	color: red;
+}
+
+section:nth-child(5) div:nth-child(3) .btn:hover + .tm-pricing-discount {
+	display: block;
+}
+
+/* Seventh task */
+
+section:nth-child(6) .form-group *:focus {
+	border-color: #24d4d4; 
+	box-shadow: 0 0 0 0.2rem #24d4d4;
+}
+
+.tm-form-header {
+	background-color: #24d4d4;
+}
+
+.tm-contact-form {
+	z-index: 2;
+	margin-top: -5vh;
+	margin-bottom: -5vh;
+}

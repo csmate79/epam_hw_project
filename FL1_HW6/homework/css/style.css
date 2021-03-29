@@ -1,0 +1,30 @@
+/*Your code goes here*/
+.game_section {
+    background-color: #525252;
+    color: #fff;
+}
+.footer {
+    background-color: #525252;
+    color: #fff;
+}
+button.btn {
+    background-color: Coral;
+    border-color: Coral;
+    color: #fff;
+}
+button.btn:hover {
+    background-color: lightcoral;
+    border-color: lightcoral;
+    color: #fff;
+}
+nav .btn {
+    background-color: #525252;
+    border-color: #525252;
+}
+nav .btn:hover {
+    background-color: #111;
+    border-color: #111;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: black;
+}

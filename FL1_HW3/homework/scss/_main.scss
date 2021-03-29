@@ -1,0 +1,256 @@
+// Write your styles here
+@use "sass:map";
+
+@mixin centering {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin reset-link {
+    text-decoration: none;
+}
+
+@mixin navNFooterWidth {
+    max-width: 80%;
+}
+
+@mixin mainWidth {
+    max-width: 50%;
+}
+
+@mixin backGroundCentering {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+@mixin smallPs {
+    line-height: $lineHeight;
+    font-size: map-get($font-sizes, "small");
+}
+
+@mixin button {
+    background-color: $buttonColor;
+    padding: 10px 25px;
+    border-radius: 5px;
+    border: 0;
+    color: $textColor;
+}
+
+@mixin card {
+    background-color: $cardBackgroundC;
+    padding: 0.5em 0.5em;
+    margin: .8em .8em;
+    border-radius: .25em;
+    color: $textColor;
+    display: flex;
+    align-items: center;
+}
+
+@mixin link {
+    color: $textColor;
+}
+
+a:link, a:visited, a:hover, a:active {
+    @include link;
+}
+
+body {
+    background-color: $bodyBackgroundColor;
+    font-family: 'Hindi', sans-serif;
+    margin: 0;
+    color: $color;
+
+    button {
+        @include button;
+    }
+}
+
+/* HEADER */
+
+header {
+    @include backGroundCentering;
+    background-image: $headerBackgImage;
+    padding-bottom: 5em;
+    padding-top: 1em;
+    border-bottom-right-radius: 30em 40%;
+    border-bottom-left-radius: 0;
+    .header-wrap {
+        @include navNFooterWidth;
+        @include centering;
+        
+        div.landing-logo { 
+            img {
+                display: inline-block;
+                vertical-align: middle;
+            }
+            p {
+                text-align: center;
+                @extend img;
+                font-family: 'Source Sans Pro', sans-serif;
+                font-weight: 700;
+                span {
+                    font-size: map-get($font-sizes , "xsmall");
+                }
+            }
+        }
+
+        .header_heading {
+            font-weight: bold;
+            font-size: 2.5em;
+            width: 350px;
+            span {
+                background: linear-gradient(360deg, $spanBackgColor 80%, rgba(0,0,0,0.0) 0%);
+            }
+        }
+
+        .header_text {
+            @include smallPs;
+            width: 450px;
+            color: $color;
+            font-weight: bold;
+        }
+
+        div.landing-logo span {
+            display: block;
+        }
+
+        div:nth-child(4) {
+            display: flex;
+            justify-content: space-between;
+            width: 400px;
+            align-items: center;
+        }
+    }
+}
+
+.header-wrap div:nth-child(4) {
+    margin-top: 3em;
+}
+
+/* MAIN BODY */
+
+main {
+    @include mainWidth;
+    @include centering;
+    margin-top: 2em;
+
+    .section_card_wrap {
+        .section_card {
+            @include card;
+
+            @each $image in $images {
+                img[src*="m-#{$image}"] {
+                    height: 200px;
+                }
+            }
+
+            .section_card_right_container {
+                text-align: center;
+                @include smallPs;
+                
+                .section_card_text {
+                    max-width: 80%;
+                    margin-left: auto;
+                    margin-right: auto;
+                    font-weight: inherit;
+                    font-size: map-get($font-sizes , "small");
+                    text-align: justify;
+                }
+
+                .section_card_heading {
+                    font-weight: 600;
+                    font-size: map-get($font-sizes , "large");
+                    margin: 2em 0;
+                }
+            }
+        }
+    }
+
+    p.section_text {
+        font-size: 1.5em;
+        font-weight: bold;
+        text-align: center;
+        span {
+            padding-top: 8px;
+            background: $spanBackgColor;
+        }
+    }
+    .section_banner {
+        padding: .5em .5em;
+        background: $sectionBannerBackgColor;
+        background: $sectionBannerBackgGradient;
+        border-radius: 5px;
+        margin-top: 7em;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-bottom: -3em;
+        position: relative;
+        .section_banner_text_wrap {
+            display: inline-block;
+            .section_banner_heading {
+                font-weight: 600;
+                font-size: map-get($font-sizes , "large");
+                span {
+                    background-color: $spanBackgColor;
+                    padding-top: 8px;
+                }
+            }
+            .section_banner_text {
+                @include smallPs;
+                color: $textColor;
+            }
+        }
+    }
+}
+
+/* FOOTER */
+
+footer {
+    background-color: $footerBackgColor;
+    color: lightgray;
+    padding-top: 7em;
+    padding-bottom: 2em;
+    font-size: map-get($font-sizes , "small");
+    font-weight: 50;
+    div.footer-wrap {
+        @include navNFooterWidth;
+        @include centering;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .footer_logo, .landing_logo {
+            display: inline-block;
+            width: 25%;
+            max-width: 25%;
+            img {
+                display: inline-block;
+                vertical-align: middle;
+            }
+            p {
+                text-align: center;
+                display: inline-block;
+                vertical-align: middle;
+                font-weight: bold;
+                span {
+                    display: block;
+                    font-weight: lighter;
+                    font-size: map-get($font-sizes , "xsmall");
+                }
+            }
+        }
+        .footer_text {
+            display: inline-block;
+            max-width: 20%;
+            width: 20%;
+            @include smallPs;
+        }
+        p.footer-cr {
+            display: inline-block;
+            width: 20%;
+            max-width: 20%;
+            @include smallPs;
+        }
+    }
+}
