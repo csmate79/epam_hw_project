@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+#root {
+    min-width: 100vw;
+    height: 100%;
+    display: flex;
+    background-color: gray;
+}
+.left-div {
+    width: 50vw;
+    height: 100vh;
+    background-color: lightblue;
+    padding-top: 5px;
+}
+.right-div {
+    width: 50vw;
+    height: 100vh;
+    background-color: gray;
+    text-align: center;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+.right-div #plot {
+    width: 500px;
+    margin: 0 auto;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+.right-div .input-container {
+    display: grid;
+    width: 400px;
+    margin: 0 auto;
+}
+.input-container label {
+    color: white;
+    text-align: start;
+}
+img {
+    height: 100%;
+    width: 300px;
+}
+.book-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3em 0 3em;
+}
+button {
+    cursor: pointer;
+} 
+#add-book {
+    background-color: gray;
+    color: #fff;
+    display: table;
+    padding: 8px;
+    border-radius: 5px;
+    margin: 2em auto;
+}
+#add-book:hover {
+    cursor: pointer;
+}
+.book {
+    cursor: pointer;
+}
+#modal {
+    color: white;
+    display: none;
+    z-index: 1;
+    padding-top: 20px;
+    width: 251px;
+    height: 100px;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    margin: 0 auto;
+  }
+  .content {
+      margin: 0 auto;
+  }

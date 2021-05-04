@@ -1,0 +1,86 @@
+/* TODO: your styles goes here*/
+.nested {
+    display: none;
+}
+#root {
+    position: relative;
+    border-radius: 5px;
+    width: 400px;
+    margin: 0 auto;
+    box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.75);
+}
+.active {
+    display: block;
+}
+.menu {
+    box-sizing: border-box;
+    display: none;
+    position: fixed;
+    background-color: rgb(255, 255, 255);
+    padding: 4px 15px 4px 5px;
+    border: 1px solid lightgray;
+}
+.menu li:hover {
+    cursor: pointer;
+}
+.menuDisabled {
+    box-sizing: border-box;
+    display: none;
+    position: fixed;
+    background-color: rgb(255, 255, 255);
+    padding: 4px 15px 4px 10px;
+    border: 1px solid lightgray;
+}
+.menuDisabled li:hover {
+    cursor: pointer;
+}
+span:hover {
+    cursor: pointer;
+}
+
+.menu > .rename, .menu > .delete {
+    color: black;
+    padding: 0 10px;
+}
+
+.menu > .rename:hover, .menu > .delete:hover {
+    border-radius: 5px;
+    background-color: rgba(224,244,255,255);
+}
+
+.folder > div > i {
+    color: rgba(237,188,11,255);
+}
+
+.file:hover, .folder > div:hover {
+    border-radius: 5px;
+    padding-left: 5px;
+    background-color: rgba(224,244,255,255);
+}
+
+.file > i {
+    color: rgba(164,172,176,255);
+}
+
+li {
+    list-style-type: none
+}
+
+.active-folder {
+    display: block;
+}
+
+.closed-folder {
+    display: none;
+}
+.menu-disabled > * {
+    color: lightgray !important;
+    cursor: default !important;
+}
+.empty {
+    font-style: italic;
+}
+#list {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
